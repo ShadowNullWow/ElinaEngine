@@ -11,12 +11,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Elina\Log.h" />
     <ClInclude Include="src\ElinaEngine.h" />
     <ClInclude Include="src\Elina\Application.h" />
     <ClInclude Include="src\Elina\Core.h" />
     <ClInclude Include="src\Elina\EntryPoint.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Elina\Log.cpp" />
     <ClCompile Include="src\Elina\Application.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -68,6 +70,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);EL_PLATFORM_WINDOWS;EL_PLATFORM_WINDOWS;ELINA_BUILD_DLL</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)ElinaEngine\vendor\spdlog\include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

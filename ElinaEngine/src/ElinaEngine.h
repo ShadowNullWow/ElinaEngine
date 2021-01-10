@@ -4,6 +4,7 @@
 
 #include <cstdio>
 #include "Elina/Application.h"
+#include "Elina/Log.h"
 
 // ---Entry Point-----------------------
 #include "Elina/EntryPoint.h"

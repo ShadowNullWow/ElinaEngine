@@ -27,9 +27,15 @@
     <ClInclude Include="src\Elina\EntryPoint.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\Elina\Log.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Elina\Application.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Elina\Log.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
