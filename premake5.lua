@@ -10,6 +10,11 @@ workspace "ElinaEngine"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+IncludeDir = {}
+IncludeDir["GLFW"] = "ElinaEngine/vendor/GLFW/include"
+
+include "ElinaEngine/vendor/GLFW"
+
 project "ElinaEngine"
 	location "ElinaEngine"
 	kind "SharedLib"
@@ -30,7 +35,14 @@ project "ElinaEngine"
 	includedirs
 	{
 		"%{prj.name}/vendor/spdlog/include",
-		"ElinaEngine/src"
+		"%{prj.name}/src",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
@@ -78,7 +90,8 @@ project "Sandbox"
 	includedirs
 	{
 		"ElinaEngine/vendor/spdlog/include",
-		"ElinaEngine/src"
+		"ElinaEngine/src",
+		"%{prj.name}/src"
 	}
 
 	links

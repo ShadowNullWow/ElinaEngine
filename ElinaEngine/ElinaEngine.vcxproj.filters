@@ -7,6 +7,12 @@
     <Filter Include="Elina\Events">
       <UniqueIdentifier>{32D18CD3-1E34-1C78-C7B9-542EB3FBE7FA}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Elina\Platform">
+      <UniqueIdentifier>{22ED2306-0EBB-170C-F74E-8832E3BBF370}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Elina\Platform\Windows">
+      <UniqueIdentifier>{5C9955AC-4893-7EFE-3100-150F1D99E46A}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Elina\Application.h">
@@ -33,6 +39,12 @@
     <ClInclude Include="src\Elina\Log.h">
       <Filter>Elina</Filter>
     </ClInclude>
+    <ClInclude Include="src\Elina\Platform\Windows\WindowsWindow.h">
+      <Filter>Elina\Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Elina\Window.h">
+      <Filter>Elina</Filter>
+    </ClInclude>
     <ClInclude Include="src\ElinaEngine.h" />
     <ClInclude Include="src\elpch.h" />
   </ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\Elina\Log.cpp">
       <Filter>Elina</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Elina\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Elina\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\elpch.cpp" />
   </ItemGroup>
