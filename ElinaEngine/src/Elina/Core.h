@@ -9,3 +9,5 @@
 #else
 	#error Elina only support Windows!
 #endif // EL_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)

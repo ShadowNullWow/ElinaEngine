@@ -4,6 +4,9 @@
     <Filter Include="Elina">
       <UniqueIdentifier>{0EA11C0D-7AB5-44BE-4337-E81DAF0A41EF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Elina\Events">
+      <UniqueIdentifier>{32D18CD3-1E34-1C78-C7B9-542EB3FBE7FA}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Elina\Application.h">
@@ -14,6 +17,18 @@
     </ClInclude>
     <ClInclude Include="src\Elina\EntryPoint.h">
       <Filter>Elina</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Elina\Events\ApplicationEvent.h">
+      <Filter>Elina\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Elina\Events\Event.h">
+      <Filter>Elina\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Elina\Events\KeyEvent.h">
+      <Filter>Elina\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Elina\Events\MouseEvent.h">
+      <Filter>Elina\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Elina\Log.h">
       <Filter>Elina</Filter>
