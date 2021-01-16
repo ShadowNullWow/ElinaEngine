@@ -1,5 +1,6 @@
 #pragma once
 
+#include "elpch.h"
 #include "Core.h"
 
 namespace Elina

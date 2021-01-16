@@ -18,6 +18,9 @@ project "ElinaEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "elpch.h"
+	pchsource "ElinaEngine/src/elpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",

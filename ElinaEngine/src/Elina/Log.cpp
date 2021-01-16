@@ -1,3 +1,4 @@
+#include "elpch.h"
 #include "Log.h"
 
 namespace Elina

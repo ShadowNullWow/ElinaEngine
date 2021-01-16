@@ -1,3 +1,4 @@
+#include "elpch.h"
 #include "Application.h"
 
 #include "Elina/Events/ApplicationEvent.h"
