@@ -2,9 +2,11 @@
 
 #include "elpch.h"
 
+#include <GLFW/glfw3.h>
+
 #include "Elina/Window.h"
 
-#include <GLFW/glfw3.h>
+struct GLFWwindow;
 
 namespace Elina
 {
@@ -20,7 +22,7 @@ namespace Elina
 		inline unsigned int GetHeight() const override { return m_Data.Height; }
 
 		//Window attributes
-		inline void SetEventCallBack(const EventCallbackFn& callback) override { m_Data.EventCallback; }
+		inline void SetEventCallBack(const EventCallbackFn& callback) override { m_Data.EventCallback = callback; }
 		void SetVSync(bool enabled) override;
 		bool IsVSync() const override;
 	private:

@@ -43,6 +43,7 @@ namespace Elina
 			return GetCategoryFlags() & category;
 		}
 
+		inline bool Handled() { return m_Handled; }
 	protected:
 		bool m_Handled = false;
 	};
@@ -62,7 +63,7 @@ namespace Elina
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				m_Event.Handled = func(*(T*)&m_Event);
+				m_Event.m_Handled = func(*(T*)&m_Event);
 				return true;
 			}
 			return false;

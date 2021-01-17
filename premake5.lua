@@ -12,8 +12,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "ElinaEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "ElinaEngine/vendor/Glad/include"
 
 include "ElinaEngine/vendor/GLFW"
+include "ElinaEngine/vendor/Glad"
 
 project "ElinaEngine"
 	location "ElinaEngine"
@@ -36,12 +38,14 @@ project "ElinaEngine"
 	{
 		"%{prj.name}/vendor/spdlog/include",
 		"%{prj.name}/src",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -53,7 +57,8 @@ project "ElinaEngine"
 		defines
 		{
 			"EL_PLATFORM_WINDOWS",
-			"EL_BUILD_DLL"
+			"EL_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands
@@ -63,14 +68,17 @@ project "ElinaEngine"
 
 	filter "configurations:Debug"
 		defines "EL_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "EL_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "EL_DIST"
+		buildoptions "/MD"
 		optimize "On"
 
 project "Sandbox"
@@ -111,12 +119,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "EL_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "EL_RELEASE"
+		buildoptions "/MD"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "EL_DIST"
+		buildoptions "/MD"
 		optimize "On"
